@@ -1,0 +1,60 @@
+.list-of-cards{
+    display: flex;
+    column-gap: 11px;
+    padding-left: 0px;
+    margin-top: 60px;
+    transition-duration: 1s;
+    @include desktop{
+        width: 849px;
+    }
+    @include slider-request{
+        width: #{272 * 2 + 11 * 2}px;
+    }
+    @include mobile{
+        width: #{272 + 11}px;
+    }
+    &__button-swipe{
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        position: relative;
+        padding: 4px;
+        box-shadow: rgba(14, 14, 14, 0.32) 0px 0px 0px 5px;
+        border-radius: 100%;
+        transition-duration: 0.5s;
+        @include small-mobile{
+            position: absolute;
+            z-index: 1;
+            right: 9%;
+        }
+        &--left{
+            rotate: 180deg;
+            @include small-mobile{
+                left: 7%;
+                width: fit-content;
+            }
+        }
+        &:active{
+            opacity: 0.5;
+        }
+        &:hover{
+            scale: 1.1;
+        }
+    }
+    &__svg-bg{
+        position: absolute;
+        z-index: -1;
+    }
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        &2{
+            overflow: hidden;
+        }
+    }
+}

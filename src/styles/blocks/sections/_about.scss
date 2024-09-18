@@ -1,0 +1,97 @@
+.about{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 95px;
+    @include tablet{
+        align-items: center;
+    }
+    @include mobile{
+        row-gap: 25px;
+    }
+    @include small-mobile{
+        margin-top: 45px;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        @include desktop{
+            column-gap: 50px;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+        &--info{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            max-width: 620px; //#{620 / 1440 * 100}vw;
+            @include tablet{
+                align-items: initial;
+                max-width: 555px;
+            }
+
+        }
+        p{
+            margin-bottom: 38px;
+        }
+        &::after{
+            content: url('../../../images/vectors/vector-for-man1.svg');
+            position: absolute;
+            z-index: -1;
+            top: 6%;
+            right: -10%;
+            @include tablet{
+                top: -47%;
+                right: -90%;
+                filter: blur(5px);
+            }
+            @include mobile{
+                top: 9%;
+                right: -69%;
+                z-index: -2;
+                filter: initial;
+            }
+        }
+        &::before{
+            content: url('../../../images/vectors/vector-for-man2.svg');
+            position: absolute;
+            z-index: -1;
+            bottom: 3%;
+            right: -8%;
+            @include tablet{
+                bottom: 0%;
+                right: -85%;
+                filter: blur(5px);
+            }
+            @include mobile{
+                bottom: 11%;
+                right: -55%;
+                z-index: -2;
+                filter: initial;
+            }
+        }
+    }
+    &__image{
+        max-width: 100%;
+        @include tablet{
+            position: absolute;
+            scale: 1.6;
+            top: 90%;
+            left: 50%;
+            translate: -50% -50%;
+            filter: blur(15px);
+            z-index: -1;
+            opacity: 0.3;
+        }
+        @include mobile{
+            position: initial;
+            scale: initial;
+            opacity: initial;
+            filter: initial;
+            translate: initial;
+            margin-bottom: 39px;
+        }
+    }
+}

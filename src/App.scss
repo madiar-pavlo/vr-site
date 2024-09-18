@@ -1,0 +1,34 @@
+@import 
+  '/src/styles/normalize',
+  '/src/styles/fonts',
+  '/src/styles/functions',
+  '/src/styles/variables',
+  '/src/styles/mixins',
+  '/src/styles/media',
+  '/src/styles/global',
+  '/src/styles/ultimates',
+  '/src/styles/animation',
+  '/src/styles/svg';
+
+@import '/src/styles/blocks/components/preloader',
+        '/src/styles/blocks/components/motion';
+
+@import
+  '/src/styles/blocks/sections/header',
+  '/src/styles/blocks/sections/hero',
+  '/src/styles/blocks/sections/about',
+  '/src/styles/blocks/sections/services',
+  '/src/styles/blocks/sections/technologies',
+  '/src/styles/blocks/sections/process',
+  '/src/styles/blocks/sections/join',
+  '/src/styles/blocks/sections/footer';
+
+@import
+  '/src/styles/blocks/components/title-with-arrow',
+  '/src/styles/blocks/components/list-of-cards',
+  '/src/styles/blocks/components/card',
+  '/src/styles/blocks/components/form',
+  '/src/styles/blocks/components/slider',
+  '/src/styles/blocks/components/email-info',
+  '/src/styles/blocks/components/navigation-list',
+  '/src/styles/blocks/components/hero-footer';

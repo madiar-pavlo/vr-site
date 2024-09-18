@@ -1,0 +1,35 @@
+.title-with-arrow{
+    display: flex;
+    align-items: end;
+    @include mobile{
+        display: block;
+    }
+    &__title{
+        text-transform: uppercase;
+        @include mobile{
+            text-align: center;
+        }
+    }
+    &__thin{
+        position: relative;
+        &::after{
+            content: url('../../../images/icons/long-arrow.svg');
+            position: absolute;
+            left: 106%;
+            top: -85%;
+            @include desktop-above{
+                bottom: 10px;
+            }
+            @include tablet{
+                content: "";
+            }
+        }
+    }
+}
+.title-without-arrow{
+    display: flex;
+    align-items: end;
+    &__title{
+        text-transform: uppercase;
+    }
+}

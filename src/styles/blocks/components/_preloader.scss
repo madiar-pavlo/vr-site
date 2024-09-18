@@ -1,0 +1,55 @@
+.preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-color-alternative);
+    z-index: 100;
+
+    &--wrapper{
+        max-width: 1270px;
+        height: 100%;
+        margin-inline: auto;
+        padding-inline: 3rem;
+        overflow: hidden;
+    }
+    &__title{
+        transform: translateX(-10%);
+        text-transform: uppercase;
+
+        opacity: 0;
+
+        animation-name: preloader-text-animation;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+
+        height: 50vh;
+
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(30%);
+
+        animation: preloader-description-animation 1s forwards;
+
+        &-react{
+            // opacity: 0;
+            // transform: translateX(-30%);
+            // height: 50px;
+            animation: no-effect-animation 3s forwards;
+        }
+        &--hope-text{
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-10%);
+        }
+    }
+
+}

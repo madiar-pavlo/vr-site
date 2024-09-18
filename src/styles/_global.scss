@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-color);
+    @include fluid-text(12, 16);
+    line-height: 1.7;
+    color: var(--white-color);
+}
+
+.App {
+    position: relative;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 6px;
+}
+
+button {
+    @include hover {
+        cursor: pointer;
+    }
+
+    &:focus-visible {
+        background: transparent;
+        color: var(--white-color);
+    }
+}
+
+input,
+textarea,
+a {
+    &:focus-visible {
+        border: 2px solid var(--white-color);
+        outline: 4px dotted blueviolet;
+        transition-duration: 1s;
+    }
+
+    &:hover {
+        background: linear-gradient(156deg, #c0b7e8 0%, #8176af 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    font-size: 14px;
+
+    &:focus-visible {
+        border: 2px solid #BDB4E5;
+        outline: none;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+p {
+    font-weight: 200;
+}
+
+h1 {
+    @include fluid-text(24, 40);
+}
+
+h2 {
+    @include fluid-text(26, 36);
+}
+
+h3 {
+    @include fluid-text(10, 22);
+    line-height: 1;
+}
+
+address {
+    @include fluid-text(9, 14);
+    font-style: normal;
+
+    @include mobile {
+        font-size: 14px;
+    }
+
+    >a {
+        padding: 0;
+    }
+}
+
+fieldset {
+    border: none;
+}
+
+dialog {
+    z-index: 10;
+    color: var(--white-color);
+    [open] {
+        animation: dialogOpenAnimation 2s forwards;
+    }
+}

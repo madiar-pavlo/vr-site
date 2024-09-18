@@ -1,0 +1,3 @@
+@function getVw($size){
+    @return calc(($size / 1440) * 100vw);
+}

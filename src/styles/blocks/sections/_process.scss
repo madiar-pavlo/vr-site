@@ -1,0 +1,83 @@
+.process{
+    margin-top: 69px;
+    &__list{
+        position: relative;
+
+        margin-block: 110px;
+
+        display: flex;
+        column-gap: 8.13em;
+        justify-content: center;
+        &::after{
+            content: url('../../../images/vectors/vector-process.svg');
+            position: absolute;
+            @include abs-center;
+            top: 25%;
+            z-index: -1;
+            @include desktop{
+                filter: blur(4px);
+            }
+        }
+    }
+    &__slider{
+        width: clamp(195px, 28vw, 290px);
+        
+        &-wrapper{
+            margin-block: 50px;
+        }
+        &--wrapper{
+            align-items: end !important;
+        }
+        &--prev-button,
+        &--next-button{
+            margin-bottom: 25px;
+        }
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    &__number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        flex-basis: 2.5em;
+        aspect-ratio: 1;
+        
+        font-size: 64px;
+        font-weight: 700;
+        color: var(--dark-color);
+        background: var(--button-background);
+
+        box-shadow: 0px 0px 0px 19px rgba(13, 13, 13, 0.32);
+
+        @include desktop{
+            margin-top: 20px;
+        }
+    }
+    &__title{
+        @include fluid-text(17, 24);
+    
+        position: relative;
+        
+        &::after{
+            content: url('../../../images/icons/arrow-without-bg.svg');
+            position: absolute;
+            top: -21.5px;
+            left: -60.5px;
+        }
+        &--slider{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 24px;
+            // width: auto;
+            &::after{
+                content: '';
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.footer {
+    display: grid;
+    grid-template-columns:
+        getVw(280) getVw(309) getVw(275) getVw(375);
+    justify-content: space-evenly;
+
+    margin-top: 115px;
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__contacts {
+        flex-direction: column;
+        align-items: center;
+
+
+        @include tablet {
+            grid-column: 1 / -1;
+            margin-top: 30px;
+        }
+
+        &--wrapper {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__list {
+            display: flex;
+            column-gap: 10px;
+
+            &-item &-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: flex;
+        }
+    }
+
+    &__site-logo {
+        @include square(186px);
+
+        &--wrapper {
+            @include tablet {
+                display: flex;
+                justify-content: center;
+            }
+            @include small-mobile{
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    &__navigation,
+    &__FAQ,
+    &__contacts {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__FAQ,
+    &__navigation {
+        position: relative;
+
+        @include small-mobile{
+            display: none;
+        }
+        &::before {
+            content: url("../../../images/vectors/vector-footer-list-item.svg");
+            position: absolute;
+            right: 25px;
+
+            @include tablet {
+                content: "";
+            }
+        }
+    }
+
+    &__navigation {
+
+        @include tablet {
+            grid-column: 2;
+        }
+
+        &::after {
+            content: url("../../../images/vectors/vector-footer-list-item.svg");
+            position: absolute;
+            left: -7px;
+
+            @include tablet {
+                content: "";
+            }
+        }
+    }
+
+    &__copyright {
+        position: relative;
+
+        font-weight: 700;
+        font-size: 14px;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        grid-column: 1 / -1;
+
+        margin-top: 90px;
+        padding-bottom: 60px;
+
+        &::after {
+            content: url("../../../images/vectors/vector-footer.svg");
+            @include abs-center;
+            top: -50px;
+        }
+    }
+
+    &__button {
+        align-self: start;
+        margin-top: 17px;
+        
+        @include tablet {
+            align-self: center;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+
+        @include tablet {
+            text-align: center;
+        }
+    }
+}

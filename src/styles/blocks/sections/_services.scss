@@ -1,0 +1,42 @@
+.services{
+    margin-top: 110px;
+    @include mobile{
+        margin-top: 60px;
+    }
+    &__list{
+        display: flex;
+        column-gap: 11px;
+        padding-inline: 0;
+    }
+    &__slider{
+        width: 80vw;
+        display: flex;
+        column-gap: 11px;
+        @include mobile{
+            width: 277px;
+        }
+        &-wrapper{
+            margin-top: 80px;
+            @include smaller-mobile{
+                scale: 95%;
+            }
+            @include mobile{
+                margin-top: 0;
+            }
+        }
+        &--next-button{
+            @include smaller-mobile{
+                position: absolute;
+                right: -1.7rem;
+                z-index: 2;
+            }
+        }
+        &--prev-button{
+            @include smaller-mobile{
+                position: absolute;
+                left: -1.7rem;
+                z-index: 2;
+            }
+        }
+    }
+}

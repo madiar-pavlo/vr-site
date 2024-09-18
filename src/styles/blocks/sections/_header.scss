@@ -1,0 +1,101 @@
+.header{
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include mobile{
+        padding-top: 25px;
+    }
+    &.container{
+        padding-inline: 20px;
+        width: auto;
+    }
+    &__navigation{
+        transition-duration: 0.5s;
+        @include mobile{
+            display: flex;
+            position: absolute;
+            background: #302c42;
+            padding: 117px;
+            height: 18vh;
+            top: 0;
+            z-index: 4;
+            left: 0;
+            right: 0;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-500px);
+            &--active{
+                transform: translateY(0px);
+            }
+        }
+    }
+
+    &__list{
+        display: flex;
+        column-gap: 37px;
+
+        list-style: none;
+        @include desktop{
+            column-gap: 15px;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+
+        &-link{
+            text-decoration: none;
+            color: var(--white-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 5px;
+            @include mobile{
+                font-size: 20px;
+            }
+        }
+    }
+    
+
+    &__button{
+        @include desktop{
+            padding: 15px;
+        }
+    }
+    &__buttons{
+        display: flex;
+        column-gap: 38px;
+        transition-duration: 0.5s;
+        @include desktop{
+            column-gap: 18px;
+        }
+        @include mobile{
+            display: none;
+        }
+    }
+    
+    &__images{
+        display: flex;
+        align-items: center;
+        @include mobile{
+            align-items: end;
+            column-gap: 11px;
+        }
+        &--text-image{
+            height: fit-content;
+            padding-bottom: 15px;
+            @include mobile{
+                height: 28px;
+            }
+        }
+        &--dragon{
+            height: fit-content;
+            @include mobile{
+                height: 69px;
+            }
+        }
+    }
+
+}
