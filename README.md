@@ -1,6 +1,7 @@
 # Made by Pavlo Madiar with React, Vite, SCSS, HTML 
 
-
+This site is available on:
+https://madiar-pavlo.github.io/vr-site/
 
 ## About this Project
 
