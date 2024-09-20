@@ -84,10 +84,7 @@ const contactsLinks = [
 
 const Footer = () => {
   return (
-    <footer className='footer1
-    
-    
-    '>
+    <footer className='footer'>
       <a href="#hero" className='footer__site-logo--wrapper'>
         <SiteLogo classNames='footer__site-logo' />
       </a>
