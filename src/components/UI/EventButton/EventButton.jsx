@@ -11,9 +11,7 @@ const EventButton = ({children, classNames = ''}) => {
     }
 
     return (
-        <>
         <button onClick={onClick} className={`button ${classNames}`}>{children}</button>
-        </>
     )
 }
 
