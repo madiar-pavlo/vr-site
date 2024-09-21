@@ -1,6 +1,7 @@
 import React from "react";
 import manWithVR from "../../../../images/man-with-vr.png";
 import Represent from "../../../UI/Represent/Represent";
+import EventButton from "../../../UI/EventButton/EventButton";
 import { motion } from "framer-motion";
 import { fromDownAnimation, showAnimation } from "/src/animations/animations";
 
@@ -26,13 +27,27 @@ const About = () => {
     >
       <Represent info={info} />
       <div className='about__info'>
-        <motion.img custom={3} variants={showAnimation} src={manWithVR} className='about__image' alt='Man With VR' />
+        <motion.img
+          custom={3}
+          variants={showAnimation}
+          src={manWithVR}
+          className='about__image'
+          alt='Man With VR'
+        />
         <div className='about__info--info'>
           <div className='title-without-arrow mobile-hidden'>
-            <motion.h2 custom={1} variants={fromDownAnimation} className='title-without-arrow__title'>
+            <motion.h2
+              custom={1}
+              variants={fromDownAnimation}
+              className='title-without-arrow__title'
+            >
               About
               <br />
-              <motion.span custom={2} variants={showAnimation} className='title-without-arrow__thin title--thin'>
+              <motion.span
+                custom={2}
+                variants={showAnimation}
+                className='title-without-arrow__thin title--thin'
+              >
                 Hydra VR
               </motion.span>
             </motion.h2>
@@ -49,7 +64,9 @@ const About = () => {
             dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing
             bibendum. Leo a diam sollicitudi n tempor.
           </motion.p>
-          <motion.button custom={2} variants={showAnimation} className='about__button button'>lets get in touch</motion.button>
+          <EventButton classNames='about__button'>
+            lets get in touch
+          </EventButton>
         </div>
       </div>
     </motion.section>

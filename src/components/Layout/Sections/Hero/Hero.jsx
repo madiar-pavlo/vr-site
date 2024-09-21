@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import MSlider from "../../../Slider/Slider";
+import EventButton from "../../../UI/EventButton/EventButton";
 
 import girl from "../../../../images/girl-pink-bg.png";
 import vectorForVr from "../../../../images/vectors/vector-for-vr.svg";
@@ -42,7 +43,7 @@ const Hero = () => {
       whileInView='visible'
       viewport={{ once: true }}
       className='hero'
-      id="hero"
+      id='hero'
     >
       <motion.div className='hero__wrapper'>
         <motion.div variants={showAnimation} className='hero__info'>
@@ -72,7 +73,7 @@ const Hero = () => {
             eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
             Lectus mauris eros in vitae .
           </motion.p>
-          <button className='hero__button button'>Build Your World</button>
+          <EventButton classNames='hero__button'>Build Your World</EventButton>
         </motion.div>
         <motion.div
           custom={3}

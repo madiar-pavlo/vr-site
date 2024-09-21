@@ -3,6 +3,7 @@ import logo from "../../../../images/logo.svg";
 import hamburgerIcon from "../../../../images/icons/hamburger-button.svg";
 import closeIcon from "../../../../images/icons/close-icon.png";
 import NavigationList from  "../../../NavigationList/NavigationList";
+import EventButton from "../../../UI/EventButton/EventButton";
 
 const textOfNavigationLinks = [
   {
@@ -52,10 +53,12 @@ const Header = () => {
             : "header__buttons tablet-hidden"
         }
       >
-        <button className='header__button button button--transparent'>
-          Contact Us
-        </button>
-        <button className='header__button button'>Join Hydra</button>
+        <EventButton classNames='header__button button--transparent'>
+            Contact Us
+        </EventButton>
+        <EventButton classNames='header__button'>
+            Join Hydra
+        </EventButton>
       </div>
       <button
         className='header__burger-button button__burger mobile-visible'

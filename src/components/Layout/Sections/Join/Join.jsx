@@ -26,7 +26,7 @@ const Join = () => {
   });
   return (
     <>
-      <Dialog buttonState={{ isFormSended, setIsFormSended }}>
+      <Dialog buttonState={[ isFormSended, setIsFormSended ]}>
           <ViewEmail personalInfo={personalInfo}/>
       </Dialog>
 

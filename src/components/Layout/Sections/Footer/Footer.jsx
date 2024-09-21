@@ -1,5 +1,7 @@
 import React from "react";
 
+import EventButton from "../../../UI/EventButton/EventButton";
+
 import SiteLogo from "../../../SVG/SiteLogo";
 import FacebookIcon from "../../../SVG/FacebookIcon";
 import TwitterIcon from "../../../SVG/TwitterIcon";
@@ -107,7 +109,9 @@ const Footer = () => {
             navigationLinksContent={contactsLinks}
             classNames='footer__contacts'
           />
-          <button className='footer__button button'>{BUTTON}</button>
+          <EventButton classNames='footer__button'>
+            {BUTTON}
+          </EventButton>
         </div>
       </div>
       <small className='footer__copyright'>{COPYRIGHT}</small>

@@ -1,7 +1,7 @@
 import closeIcon from "../../../images/icons/close-icon.png";
 
 const Dialog = ({ buttonState, children }) => {
-  const { isFormSended, setIsFormSended } = buttonState;
+  const [ isFormSended, setIsFormSended ] = buttonState;
 
   const getDialogAttrs = () => {
     if (isFormSended) {
