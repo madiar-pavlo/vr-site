@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import InputWrapper from "../UI/InputLabel/InputWrapper";
 import { motion } from "framer-motion";
 import { fromDownAnimation } from "/src/animations/animations";
+import { Context } from "../../context/Context";
 
 const inputsForPersonalInfo = [
   {
@@ -34,12 +35,14 @@ const messageTextArea = {
 };
 
 const JoinForm = ({ buttonState, personalState, emailState }) => {
+  const {setIsPopupOpen} = useContext(Context)
   const { setIsFormSended } = buttonState;
   const { personalInfo, setPersonalInfo } = personalState;
   const { emailContent, setEmailContent } = emailState;
   const onClick = (e) => {
     e.preventDefault();
     setIsFormSended(true);
+    setIsPopupOpen(true)
   };
   return (
     <motion.form variants={fromDownAnimation} action='' className='form'>

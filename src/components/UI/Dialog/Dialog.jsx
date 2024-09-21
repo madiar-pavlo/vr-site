@@ -1,17 +1,20 @@
+import { useContext } from "react";
 import closeIcon from "../../../images/icons/close-icon.png";
+import { Context } from "../../../context/Context";
 
 const Dialog = ({ buttonState, children }) => {
-  const [ isFormSended, setIsFormSended ] = buttonState;
+  const { setIsPopupOpen } = useContext(Context);
+  const [isFormSended, setIsFormSended] = buttonState;
 
   const getDialogAttrs = () => {
     if (isFormSended) {
       return {
         close: false,
-        open: true,
+        open: "true",
       };
     } else {
       return {
-        close: true,
+        close: "true",
         open: false,
       };
     }
@@ -19,13 +22,13 @@ const Dialog = ({ buttonState, children }) => {
 
   return (
     <>
-      <div className={`backdrop ${isFormSended ? "backdrop--show" : ""}`}></div>
       <dialog className={`email-info container`} {...getDialogAttrs()}>
         <div className='dialog__wrapper'>
           <button
             className='button__burger--close'
             onClick={() => {
               setIsFormSended(false);
+              setIsPopupOpen(false);
             }}
           >
             <img src={closeIcon} alt='close menu' />

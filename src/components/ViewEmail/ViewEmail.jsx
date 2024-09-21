@@ -2,8 +2,6 @@ const ViewEmail = ({ personalInfo }) => {
 
   const { firstName = 'Anonym', lastName, tel = '+You dont have write it in+', email = 'youdonthavewrite@it.in' } = personalInfo;
 
-  console.log(Boolean(null))
-
   return (
     <>
       <h3>Hi {`${firstName} ${lastName}`}</h3>

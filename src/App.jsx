@@ -13,14 +13,29 @@ function App() {
   const isTablet = useMediaQuery("(max-width: 1024px)");
   const isMobile = useMediaQuery("(max-width: 767px)");
 
-  const [isntFirstVisit, setIsntFirstVisit] = useState(localStorage.getItem("isntFirstVisit"));
-
+  const [isntFirstVisit, setIsntFirstVisit] = useState(
+    localStorage.getItem("isntFirstVisit")
+  );
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isIDKDialogOpen, setIsIDKDialogOpen] = useState(false);
 
   return (
-    <Context.Provider value={{ isDesktop, isTablet, isMobile, isntFirstVisit, setIsntFirstVisit }}>
+    <Context.Provider
+      value={{
+        isDesktop,
+        isTablet,
+        isMobile,
+        isntFirstVisit,
+        setIsntFirstVisit,
+        isPopupOpen,
+        setIsPopupOpen,
+        isIDKDialogOpen,
+        setIsIDKDialogOpen,
+      }}
+    >
       <div className='App'>
-        <BrowserRouter basename="/vr-site">
-          <AppRouter/>
+        <BrowserRouter basename='/vr-site'>
+          <AppRouter />
         </BrowserRouter>
       </div>
     </Context.Provider>

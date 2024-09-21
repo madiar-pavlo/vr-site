@@ -1,20 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Dialog from "../Dialog/Dialog"
+import { Context } from "../../../context/Context"
 
-const EventButton = ({children, classNames}) => {
-    const [ isDialogOpen, setIsDialogOpen ] = useState(false)
+const EventButton = ({children, classNames = ''}) => {
+    const {setIsPopupOpen, setIsIDKDialogOpen} = useContext(Context)
 
     const onClick = () => {
-        setIsDialogOpen(true)
+        setIsIDKDialogOpen(true)
+        setIsPopupOpen(true)
     }
 
     return (
         <>
-        <Dialog buttonState={[isDialogOpen, setIsDialogOpen]}>
-            <h3>
-                Hey, I dont know what to do on click	&#128517;
-            </h3>
-        </Dialog>
         <button onClick={onClick} className={`button ${classNames}`}>{children}</button>
         </>
     )
